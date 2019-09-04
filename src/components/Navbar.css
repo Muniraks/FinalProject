@@ -1,0 +1,15 @@
+.Nav-bar{
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  }
+
+  .Nav-bar-item{
+   color:white;
+   text-align: center;
+   padding: 14px 16px;
+  }
+
+  .Nav-bar-item:hover {
+    background-color: white;
+  }
