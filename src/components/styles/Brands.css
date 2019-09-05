@@ -1,0 +1,34 @@
+.brands-list {
+    /* background: #f95; */
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow: hidden; */
+    /* height: 400px; */
+    /* width: 900px; */
+    align-items: flex-start;
+    /* align-content: stretch; */
+    padding: 10px;
+    justify-content: space-around;
+
+    margin-top:30px;
+   
+}
+
+.brands-list-group{
+    /* border: 1px solid rgb(150, 150, 150); */
+    margin-left: 50px;
+    display: table ;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    width: 100px;
+    /* display: inline-block; */
+
+
+}
+
+.brands-title{
+    text-align: center;
+    margin-top: 10px;
+
+}

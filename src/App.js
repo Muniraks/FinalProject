@@ -14,6 +14,7 @@ import NewIn from './components/NewIn';
 import Brands from './components/Brands';
 import Products from './components/Products';
 import Homepage from './components/Homepage';
+import BrandProfile from './components/BrandProfile';
 
 class App extends Component {
   constructor () {
@@ -59,6 +60,7 @@ class App extends Component {
       <Route path="/NewIn" component={NewIn}/>
       <Route path="/Brands" component={Brands}/>
       <Route path="/Products" component={Products}/>
+      <Route path="/BrandProfile" component={BrandProfile}/>
         </main>
       </React.Fragment>
     )

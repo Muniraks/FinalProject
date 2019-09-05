@@ -1,0 +1,23 @@
+.item-card{
+    border: black solid;
+    display: block;
+    height:300px;
+    width: 250px;
+    margin-top:15px;
+
+}
+
+.card-image {
+  height: 160px;
+margin-bottom: 4px;
+}
+
+.add-to-cart-btn{
+height: 35px;
+margin-top: -10px;
+margin-left: 180px;
+display:flex;
+  
+}
+
+

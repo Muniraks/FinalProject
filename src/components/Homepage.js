@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import './Homepage.css';
+import '../components/styles/Homepage.css';
 
  class Homepage extends Component {
     render() {
