@@ -62,6 +62,34 @@ class App extends Component {
         size: 'M',
         brand: 'Converse',
         price:100,
+      },
+      {
+        id: '5',
+        type: 'NotShoes',
+        size: 'M',
+        brand: 'Converse',
+        price:100,
+      },
+      {
+        id: '6',
+        type: 'NotShoes',
+        size: 'M',
+        brand: 'Converse',
+        price:100,
+      },
+      {
+        id: '7',
+        type: 'NotShoes',
+        size: 'M',
+        brand: 'Converse',
+        price:100,
+      },
+      {
+        id: '8',
+        type: 'NotShoes',
+        size: 'M',
+        brand: 'Converse',
+        price:100,
       }
     ]
 

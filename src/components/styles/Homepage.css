@@ -21,6 +21,7 @@
     padding-right: 20px;
     border: solid black;
     display:block;
+    
     float: left;
       
 }
@@ -41,6 +42,7 @@ h2{
     font-family: 'Oranienbaum', serif;
     vertical-align: middle;
     text-align: center;
+    justify-content: center;
 }
 
 #h2-one {

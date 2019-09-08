@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 import ItemCard from './ItemCard';
+import '../components/styles/Products.css';
+
 
  class Products extends Component {
     
@@ -22,9 +24,11 @@ import ItemCard from './ItemCard';
         />)
 
         return (
-            <div>
-                {products}  
-            </div>
+          <div className="product-div">
+               {products}  
+          </div>
+               
+           
         )
     }
 }

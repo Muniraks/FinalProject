@@ -17,7 +17,7 @@ class ItemCard extends Component {
 
         
         return (
-            <div>
+            <div className="Item-cards-div">
             <Card className="item-card">
               <CardImg className="card-image"  src={this.props.productImage}/>
               <CardBody>

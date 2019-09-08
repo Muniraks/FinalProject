@@ -10,12 +10,13 @@
     /* align-content: stretch; */
     padding: 10px;
     justify-content: space-around;
-
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top:30px;
    
 }
 
 .brands-list-group{
+    
     /* border: 1px solid rgb(150, 150, 150); */
     margin-left: 50px;
     display: table ;
@@ -28,6 +29,8 @@
 }
 
 .brands-title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
     text-align: center;
     margin-top: 10px;
 
