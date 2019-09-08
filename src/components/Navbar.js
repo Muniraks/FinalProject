@@ -14,6 +14,8 @@ export default class Navbar extends Component {
                   <Link className="Nav-bar-item" to="/Products">Products</Link>
                   <Link className="Nav-bar-item" to="/Brands">Brands</Link>
                   <Link className="Nav-bar-item" to="/BrandProfile">Brand Profile</Link>
+                  <Link className="Nav-bar-item" to="/Cart">Cart</Link>
+            
                   
             </div>
         )

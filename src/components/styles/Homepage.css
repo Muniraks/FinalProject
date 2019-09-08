@@ -1,8 +1,49 @@
 .Home-slideshow {
     height: 600px;
     width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+   
+    
+}
+
+.right-home-div{
+    height: 600px;
+    width: 700px;
+    margin-top: 20px;
+    margin-right: -100px;
+    display:block;
+    float: right;
+
+}
+
+.left-home-div{
+    margin-top: 20px;
+    margin-right: 70px;
+    padding-right: 20px;
+    border: solid black;
+    display:block;
+    float: left;
+      
+}
+
+.Home{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+h1 {
+    font-family: 'Monoton', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oranienbaum&display=swap');
+h2{
+    font-family: 'Oranienbaum', serif;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#h2-one {
+    font-weight: bold;
     
 }

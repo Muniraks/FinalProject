@@ -14,10 +14,17 @@ margin-bottom: 4px;
 
 .add-to-cart-btn{
 height: 35px;
-margin-top: -10px;
+margin-top: -43px;
 margin-left: 180px;
 display:flex;
-  
+
+}
+.add-to-cart-btn:active {
+  transform: translateY(4px);
+}
+
+.size-list{
+  width: 50px;
 }
 
 

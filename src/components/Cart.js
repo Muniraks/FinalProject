@@ -10,4 +10,4 @@ export class Cart extends Component {
     }
 }
 
-export default Cart
+export default Cart;
