@@ -7,28 +7,40 @@ import ItemCard from './ItemCard';
 
 
 export class BrandProfile extends Component {
-
+    state = { brandProducts: []}
     componentDidMount(){
         axios.get(`http://localhost:3000/brands/${this.props.match.params.id}/products`)
         .then(res => {
             console.log("got products!",res)
+            this.setState({brandProducts: res.data.products})
         })
         .catch(err => {
             console.log(err)
         })
     }
 
+    // componentDidUpdate(){
+    //     axios.get(`http://localhost:3000/brands/${this.props.match.params.id}/products`)
+    //     .then(res => {
+    //         console.log("got products!",res)
+    //         this.setState({brandProducts: res.data.products})
+    //     })
+    //     .catch(err => {
+    //         console.log(err)
+    //     })
+    // }
+
     render() {
-        const products = this.props.products.map(product => 
+        const products = this.state.brandProducts.map(product => 
             <ItemCard 
-            type={product.type} 
+            type={product.name} 
             size={product.size} 
             brand={product.brand} 
             productImage={product.productImage}
             price={product.price}
     
-            key={product.id} 
-            id={product.id}
+            key={product._id} 
+            id={product._id}
     
             addToCart={this.props.addToCart}
             />)

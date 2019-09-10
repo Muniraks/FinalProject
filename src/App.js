@@ -19,7 +19,8 @@ import Homepage from './components/Homepage';
 import BrandProfile from './components/BrandProfile';
 import Cart from './components/Cart';
 import Payment from './components/Payment';
-import SellForm from './components/SellForm';
+import newProduct from './components/newProduct';
+
 
 class App extends Component {
   constructor() {
@@ -103,7 +104,7 @@ class App extends Component {
           <Route path="/BrandProfile/:id" render={(props) => <BrandProfile {...props} products={this.state.products} addToCart={this.addToCart} />} />
           <Route path="/Cart" component={() => <Cart cart={this.state.cart}/>} />
           <Route path="/Payment" component={Payment} />
-          <Route path="/SellForm" component={SellForm} />
+          <Route path="/newProduct" component={newProduct} />
         </main>
       </React.Fragment>
     )

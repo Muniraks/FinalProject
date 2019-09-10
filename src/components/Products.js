@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import NewProduct from './newProduct'
 
 import ItemCard from './ItemCard';
 import '../components/styles/Products.css';
@@ -61,7 +60,7 @@ componentDidMount() {
         return (
           <div className="product-div">
                {products}  
-               <NewProduct/>
+              
           </div>
                
            
