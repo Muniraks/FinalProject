@@ -3,6 +3,7 @@ import './App.scss'
 import { Route } from 'react-router-dom'
 
 import _ from 'lodash';
+import axios from 'axios';
 
 import AuthenticatedRoute from './auth/components/AuthenticatedRoute'
 import Header from './header/Header'
@@ -12,12 +13,13 @@ import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
 import AlertDismissible from './auth/components/AlertDismissible'
 
-import NewIn from './components/NewIn';
 import Brands from './components/Brands';
 import Products from './components/Products';
 import Homepage from './components/Homepage';
 import BrandProfile from './components/BrandProfile';
 import Cart from './components/Cart';
+import Payment from './components/Payment';
+import SellForm from './components/SellForm';
 
 class App extends Component {
   constructor() {
@@ -28,75 +30,24 @@ class App extends Component {
       alerts: [],
       products: [],
       cart:[],
+      brandId:null,
     }
   }
 
 
   componentDidMount() {
-    const dummyProduct = [
-      {
-        id: '1',
-        type: 'shoes',
-        size: 'S',
-        brand: 'adidas',
-        price:100,
 
-      },
-      {
-        id: '2',
-        type: 'shoes',
-        size: 'L',
-        brand: 'Nike',
-        price:100,
-      },
-      {
-        id: '3',
-        type: 'NotShoes',
-        size: 'M',
-        brand: 'Converse',
-        price:100,
-      },
-      {
-        id: '4',
-        type: 'NotShoes',
-        size: 'M',
-        brand: 'Converse',
-        price:100,
-      },
-      {
-        id: '5',
-        type: 'NotShoes',
-        size: 'M',
-        brand: 'Converse',
-        price:100,
-      },
-      {
-        id: '6',
-        type: 'NotShoes',
-        size: 'M',
-        brand: 'Converse',
-        price:100,
-      },
-      {
-        id: '7',
-        type: 'NotShoes',
-        size: 'M',
-        brand: 'Converse',
-        price:100,
-      },
-      {
-        id: '8',
-        type: 'NotShoes',
-        size: 'M',
-        brand: 'Converse',
-        price:100,
-      }
-    ]
-
-    this.setState({
-      products: dummyProduct
+    axios.get('http://localhost:3000/products')
+    .then(res => {
+      console.log(res.data.products)
+      this.setState({
+        products: res.data.products
+      
     })
-
+  })
+    .catch(err => {
+      console.log(err)
+    })
   }
 
   setUser = user => this.setState({ user })
@@ -110,10 +61,16 @@ class App extends Component {
   //  
 
  addToCart = (id) => {
-   const product = _.find(this.state.products, {id: id});
+   const product = _.find(this.state.products, {_id: id});
    console.log('found the product:', product)
     this.setState({cart: [...this.state.cart, product]});
  }
+
+ handleOnClickBrand(id) {
+  this.setState({
+     brandId: id
+    })
+}
 
   render() {
     const { alerts, user } = this.state
@@ -137,16 +94,20 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
           )} />
+          <Route user={user} path='/products' render={() => (
+            <Products user={user} products={this.state.products} addToCart={this.addToCart} />
+          )} />
+          
           <Route path="/Home" component={Homepage} />
-          <Route path="/NewIn" component={NewIn} />
           <Route path="/Brands" component={Brands} />
-          <Route path="/Products" component={() => <Products products={this.state.products} addToCart={this.addToCart} />} />
-          <Route path="/BrandProfile" component={() => <BrandProfile products={this.state.products} addToCart={this.addToCart} />} />
-          <Route path="/Cart" component={Cart} />
+          <Route path="/BrandProfile/:id" render={(props) => <BrandProfile {...props} products={this.state.products} addToCart={this.addToCart} />} />
+          <Route path="/Cart" component={() => <Cart cart={this.state.cart}/>} />
+          <Route path="/Payment" component={Payment} />
+          <Route path="/SellForm" component={SellForm} />
         </main>
       </React.Fragment>
     )
-  }
+  }           
 }
 
 export default App

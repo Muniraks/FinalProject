@@ -1,0 +1,35 @@
+
+.table {
+    margin-top: 20px;
+}
+
+.remove-btn{
+    width: 25px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.remove-btn:active {
+    transform: translateY(2px);
+  }
+
+  .cart-input {
+    width: 40px;
+    margin-top: 5px;
+    margin-left: 13px;
+  }
+
+.cart-input:focus{
+    outline:none;
+  }
+
+  .checkout-btn, button{
+     background-color: black;
+     color: white;
+  }
+  .checkout-btn:active {
+    transform: translateY(2px);
+  }
+  .checkout-btn:focus {
+    outline:none;
+  }

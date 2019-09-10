@@ -12,6 +12,10 @@
    padding: 14px 16px;
   }
 
+
   .Nav-bar-item:hover {
     background-color: white;
+    text-decoration:none;
+    color: black;
+   
   }

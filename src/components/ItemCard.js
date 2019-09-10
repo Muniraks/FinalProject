@@ -29,6 +29,8 @@ class ItemCard extends Component {
             <option>L</option>
           </Input>
               <img className="add-to-cart-btn" src="addtocart.png" onClick={this.handleAddToCart}/>
+
+              {/* <img className="add-to-cart-btn" src="addtocart.png" onClick={this.props.deleteItem}/> */}
               </CardBody>
             </Card>
           </div>

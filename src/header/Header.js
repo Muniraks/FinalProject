@@ -29,7 +29,7 @@ const Header = ({ user }) => (
   <div>
 
     <header className="main-header">
-      <h1>THE STORE</h1>
+     <Link className="logo"to="/Home"> <h1>THE STORE</h1></Link>
       <nav>
         {user && <span>Welcome, {user.email}</span>}
         {user ? authenticatedOptions : unauthenticatedOptions}

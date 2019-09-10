@@ -20,10 +20,10 @@
     margin-right: 70px;
     padding-right: 20px;
     border: solid black;
-    display:block;
-    
-    float: left;
-      
+    display:flex;
+    flex-direction: column; 
+    justify-content: space-evenly;
+    align-items:center;
 }
 
 .Home{
@@ -35,17 +35,25 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
 h1 {
     font-family: 'Monoton', cursive;
+    outline: none;
+    color: black;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Oranienbaum&display=swap');
 h2{
     font-family: 'Oranienbaum', serif;
-    vertical-align: middle;
     text-align: center;
-    justify-content: center;
-}
-
-#h2-one {
     font-weight: bold;
     
-}
+ }
+
+ .sell-form-btn:focus{
+    outline:none;
+  }
+  .sell-form-btn:active {
+    transform: translateY(2px);
+  }
+  .sell-form-btn{
+    background-color: black;
+    color: white;
+  }

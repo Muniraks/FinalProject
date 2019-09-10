@@ -1,0 +1,21 @@
+.payment-form{
+    border:solid black;
+    padding:10px;
+    margin-top: 20px;
+}
+
+.card-number-input{
+    width: 300px;
+}
+
+.card-name-input{
+    width:300px;
+}
+
+.card-code-input{
+    width:150px;
+}
+
+.card-date-input{
+    width:150px;
+}

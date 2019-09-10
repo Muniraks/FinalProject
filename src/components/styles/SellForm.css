@@ -1,0 +1,13 @@
+.sell-form{
+    border:solid black;
+    padding:10px;
+    margin-top: 20px;
+}
+.add-brand-btn{
+    background-color: black;
+    color: white;
+ }
+
+ .add-brand-btn:focus{
+     outline: none;
+ }

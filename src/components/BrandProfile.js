@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
 import '../components/styles/BrandProfile.css';
 
+import axios from 'axios'
+
 import ItemCard from './ItemCard';
 
 
 export class BrandProfile extends Component {
+
+    componentDidMount(){
+        axios.get(`http://localhost:3000/brands/${this.props.match.params.id}/products`)
+        .then(res => {
+            console.log("got products!",res)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
+
     render() {
         const products = this.props.products.map(product => 
             <ItemCard 

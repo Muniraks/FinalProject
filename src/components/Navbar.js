@@ -10,11 +10,11 @@ export default class Navbar extends Component {
         return (
             <div className="Nav-bar">
                   <Link className="Nav-bar-item" to="/Home">Home</Link>
-                  <Link className="Nav-bar-item" to="/NewIn">NewIn</Link>
                   <Link className="Nav-bar-item" to="/Products">Products</Link>
                   <Link className="Nav-bar-item" to="/Brands">Brands</Link>
                   <Link className="Nav-bar-item" to="/BrandProfile">Brand Profile</Link>
                   <Link className="Nav-bar-item" to="/Cart">Cart</Link>
+                  <Link className="Nav-bar-item" to="/Payment">Payment</Link>
             
                   
             </div>
