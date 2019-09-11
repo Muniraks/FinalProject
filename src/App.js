@@ -20,6 +20,7 @@ import BrandProfile from './components/BrandProfile';
 import Cart from './components/Cart';
 import Payment from './components/Payment';
 import newProduct from './components/newProduct';
+import UpdateProduct from './components/updateProduct';
 
 
 class App extends Component {
@@ -60,6 +61,9 @@ class App extends Component {
     this.setState({cart: [...this.state.cart, product]});
  }
 
+ findProduct = (id) => {
+  return _.find(this.state.products, {_id: id}) || false;
+ }
  handleOnClickBrand(id) {
   this.setState({
      brandId: id
@@ -120,6 +124,7 @@ updateProducts = () => {
           <Route path="/Cart" component={() => <Cart cart={this.state.cart}/>} />
           <Route path="/Payment" component={Payment} />
           <Route path="/newProduct" component={newProduct} />
+          <Route path="/updateProduct/:id" render={(props) => <UpdateProduct {...props} findProduct={this.findProduct} />} />
         </main>
       </React.Fragment>
     )

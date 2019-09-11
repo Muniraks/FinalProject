@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Input } from 'reactstrap';
 import '../components/styles/ItemCard.css';
-
+import {Link} from 'react-router-dom';
 
 import { Card, CardImg, CardText, CardBody,
     CardTitle, Button } from 'reactstrap';
@@ -31,6 +31,7 @@ class ItemCard extends Component {
           </Input>
             </div>
               <img className="remove-btn" src="removebtn.png" onClick={this.props.deleteItem}/>
+              <Link to={`/updateProduct/${this.props.id}`}>Update</Link>
               <img className="add-to-cart-btn" src="addtocart.png" onClick={this.handleAddToCart}/>
               </CardBody>
             </Card>
