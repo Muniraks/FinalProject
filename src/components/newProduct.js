@@ -57,6 +57,7 @@ constructor(props){
             console.log(this.state)
             
             const getUserToken = localStorage.getItem('userToken')
+            console.log(getUserToken)
             const token = {
                 headers: {
                     Authorization: `bearer ${getUserToken}`

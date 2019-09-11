@@ -21,16 +21,17 @@ class ItemCard extends Component {
             <Card className="item-card">
               <CardImg className="card-image"  src={this.props.productImage}/>
               <CardBody>
-                <CardTitle>{this.props.type}</CardTitle>
-                <CardText>{this.props.price}SAR</CardText>
+                  <div className="product-info-body">
+                <CardTitle>type:{this.props.type}</CardTitle>
+                <CardText>Price: {this.props.price}SAR</CardText>
                 <Input className="size-list" type="select" name="select size" id="exampleSelect">
             <option>S</option>
             <option>M</option>
             <option>L</option>
           </Input>
+            </div>
+              <img className="remove-btn" src="removebtn.png" onClick={this.props.deleteItem}/>
               <img className="add-to-cart-btn" src="addtocart.png" onClick={this.handleAddToCart}/>
-
-              {/* <img className="add-to-cart-btn" src="addtocart.png" onClick={this.props.deleteItem}/> */}
               </CardBody>
             </Card>
           </div>

@@ -8,6 +8,13 @@ class Payment extends Component {
             <div>
 
                 <div className="payment-form">
+
+                    <div className="payment-imgs">
+                        <img className="payment-img" src="mada.png"/>
+                        <img className="payment-img" src="mastercard.png"/>
+                        <img className="payment-img" src="visa.png"/>
+                    </div>
+
                 <Form>
                 <Label>Card number</Label>
                 <Input  placeholder="Card Number" className="card-number-input"/>

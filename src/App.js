@@ -37,18 +37,11 @@ class App extends Component {
 
 
   componentDidMount() {
+    const user = localStorage.getItem('user');
+    console.log('const', user);
+    
 
-    axios.get('http://localhost:3000/products')
-    .then(res => {
-      console.log(res.data.products)
-      this.setState({
-        products: res.data.products
-      
-    })
-  })
-    .catch(err => {
-      console.log(err)
-    })
+
   }
 
   setUser = user => this.setState({ user })
@@ -71,6 +64,28 @@ class App extends Component {
   this.setState({
      brandId: id
     })
+}
+
+handleDelete = (id) => {
+  const product = _.find(this.state.products, {_id: id});
+  const productsCopy = [...this.state.products];
+  const indexOfProduct = productsCopy.indexOf(product);
+  productsCopy.splice(indexOfProduct, 1);
+  this.setState({ products: productsCopy });
+}
+
+updateProducts = () => {
+  axios.get('http://localhost:3000/products')
+  .then(res => {
+    console.log(res.data.products)
+    this.setState({
+      products: res.data.products
+    
+  })
+})
+  .catch(err => {
+    console.log(err)
+  });
 }
 
   render() {
@@ -96,12 +111,12 @@ class App extends Component {
             <ChangePassword alert={this.alert} user={user} />
           )} />
           <Route user={user} path='/products' render={() => (
-            <Products user={user} products={this.state.products} addToCart={this.addToCart} />
+            <Products user={user} products={this.state.products} updateProducts={this.updateProducts} handleDelete={this.handleDelete} addToCart={this.addToCart} />
           )} />
           
           <Route path="/Home" component={Homepage} />
           <Route path="/Brands" component={Brands} />
-          <Route path="/BrandProfile/:id" render={(props) => <BrandProfile {...props} products={this.state.products} addToCart={this.addToCart} />} />
+          <Route path="/BrandProfile/:id" render={(props) => <BrandProfile user={user} {...props} products={this.state.products} handleDelete={this.handleDelete} addToCart={this.addToCart} />} />
           <Route path="/Cart" component={() => <Cart cart={this.state.cart}/>} />
           <Route path="/Payment" component={Payment} />
           <Route path="/newProduct" component={newProduct} />

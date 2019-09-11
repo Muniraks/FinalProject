@@ -23,6 +23,7 @@ import '../components/styles/Products.css';
     axios.delete(`http://localhost:3000/products/${id}`, token)
     .then(res => {
         console.log('deleted',res)
+        this.props.handleDelete(id);
     })
 
     .catch(err => {
@@ -32,11 +33,7 @@ import '../components/styles/Products.css';
   }
     
 componentDidMount() {
-  axios.get('http://localhost:3000/products')
-  .then(res => {
-    console.log(res)
-  })
-  .catch(err => (console.log(err)))
+  this.props.updateProducts();
 }
     render() {
       console.log(this.props.user);
@@ -44,7 +41,8 @@ componentDidMount() {
 
 
         const products = this.props.products.map(product => 
-        <ItemCard 
+        <ItemCard
+        name={product.name}
         type={product.type} 
         size={product.size} 
         brand={product.brand} 

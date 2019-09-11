@@ -6,12 +6,15 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
+    border-radius: 15px;
+   
 
 }
 
 .card-image {
-  height: 160px;
-margin-bottom: 4px;
+height: 160px;
+margin-bottom: -20px;
+border-radius: 15px;
 }
 
 .add-to-cart-btn{
@@ -27,6 +30,15 @@ display:flex;
 
 .size-list{
   width: 50px;
+}
+
+.remove-btn{
+  float:right;
+  justify-content: baseline;
+}
+
+.product-info-body{
+display: inline;
 }
 
 
