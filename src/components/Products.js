@@ -51,7 +51,8 @@ componentDidMount() {
         deleteItem={()=>this.deleteItem(product._id)}
         key={product._id} 
         id={product._id}
-
+        owner={product.owner}
+        user={this.props.user}
         addToCart={this.props.addToCart}
         />)
 
