@@ -38,9 +38,15 @@ class App extends Component {
 
 
   componentDidMount() {
-    const user = localStorage.getItem('user');
-    console.log('const', user);
-    
+    if(localStorage.getItem('_id')){
+      const user = {
+        _id: localStorage.getItem('_id'),
+        token: localStorage.getItem('token'),
+        email: localStorage.getItem('email')
+      }
+      console.log('localStorage user:', user)
+      this.setState({ user })
+    }    
 
 
   }

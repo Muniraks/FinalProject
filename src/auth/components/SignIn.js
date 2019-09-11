@@ -26,9 +26,9 @@ class SignIn extends Component {
     signIn(this.state)
       .then(res => {
         console.log(res.data)
-        localStorage.setItem('user', res.data);
-        localStorage.setItem('userToken', res.data.user.token)
-        localStorage.setItem('ownerId', res.data.user._id)
+        localStorage.setItem('email', res.data.user.email);
+        localStorage.setItem('token', res.data.user.token);
+        localStorage.setItem('_id', res.data.user._id);
       setUser(res.data.user) })
       
       .then(() => alert(messages.signInSuccess, 'success'))
