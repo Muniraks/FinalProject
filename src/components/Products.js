@@ -46,7 +46,7 @@ componentDidMount() {
         type={product.type} 
         size={product.size} 
         brand={product.brand} 
-        productImage={product.productImage}
+        productImage={product.image}
         price={product.price}
         deleteItem={()=>this.deleteItem(product._id)}
         key={product._id} 

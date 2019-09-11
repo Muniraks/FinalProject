@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
- 
+import { withRouter } from 'react-router-dom'
 import axios from 'axios';
 
 export class UpdateProduct extends Component {
@@ -55,6 +55,7 @@ export class UpdateProduct extends Component {
         axios.patch('http://localhost:3000/products/' + id, this.state, token)
         .then(res => {
             console.log(res)
+            this.props.history.push('/products');
         })
         .catch(err => {
             console.log(this.state)
@@ -124,4 +125,4 @@ export class UpdateProduct extends Component {
     }
 }
 
-export default UpdateProduct
+export default withRouter(UpdateProduct);

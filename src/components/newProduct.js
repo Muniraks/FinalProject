@@ -2,7 +2,7 @@ import React, {
     Component
 } from 'react'
 import axios from 'axios'
-
+import { withRouter } from 'react-router-dom'
 import { Button, Form, FormGroup, Label, Input, FormText, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
@@ -70,6 +70,7 @@ constructor(props){
             axios.post('http://localhost:3000/products', this.state, token)
             .then(res => {
                 console.log(res)
+                this.props.history.push('/products');
             })
             .catch(err => {
                 console.log(this.state)
@@ -137,4 +138,4 @@ constructor(props){
         )
     }
 }
-export default NewProduct;
+export default withRouter(NewProduct);

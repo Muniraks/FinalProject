@@ -20,8 +20,11 @@ class ItemCard extends Component {
             if (owner === user._id) {
                 return (
                     <div>
+                        <Link to={`/updateProduct/${this.props.id}`}> 
+                        <img src="edit.png" className="edit-btn"/> 
+                        </Link>
                         <img className="remove-btn" src="removebtn.png" onClick={this.props.deleteItem} />
-                        <Link to={`/updateProduct/${this.props.id}`}>Update</Link>
+
                     </div>
                 )
             }
@@ -34,6 +37,7 @@ class ItemCard extends Component {
             <div className="Item-cards-div">
                 <Card className="item-card">
                     <CardImg className="card-image" src={this.props.productImage} />
+            
                     <CardBody>
                         <div className="product-info-body">
                             <CardTitle>type:{this.props.type}</CardTitle>
@@ -44,8 +48,13 @@ class ItemCard extends Component {
                                 <option>L</option>
                             </Input>
                         </div>
-                        {this.renderOwnerBtns()}
-                        <img className="add-to-cart-btn" src="addtocart.png" onClick={this.handleAddToCart} />
+                     <div className="btns">
+                     <img className="add-to-cart-btn" src="addtocart.png" onClick={this.handleAddToCart} />
+
+                       {this.renderOwnerBtns()}
+                       </div>
+                    
+                      
                     </CardBody>
                 </Card>
             </div>
