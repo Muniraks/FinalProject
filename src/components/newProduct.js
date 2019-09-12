@@ -3,6 +3,8 @@ import React, {
 } from 'react'
 import axios from 'axios'
 import { withRouter } from 'react-router-dom'
+import '../components/styles/newProduct.css';
+
 import { Button, Form, FormGroup, Label, Input, FormText, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
@@ -83,6 +85,7 @@ constructor(props){
             <div>
                 
                 <div className="sell-form">
+                <h2> Sell your product with THE STORE</h2>
                     <Form onSubmit={this.submitHandler}>
                         <Label>Name</Label>
                         <Input placeholder="" className="" name="name" value={name} onChange= {this.changeHandler} />
@@ -112,7 +115,7 @@ constructor(props){
                             <Label for="exampleFile">Image</Label>
                             <Input type="text" value={image} name="image" onChange= {this.changeHandler}  />
                         </FormGroup>
-                        <Button type='submit'>submit</Button>
+                        <Button className="submit-product-btn" type='submit'>submit</Button>
                     </Form>
 
                     <Button className="add-brand-btn" onClick={this.toggle}>Create a brand</Button>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../components/styles/Cart.css';
+import {Link} from 'react-router-dom';
 
 
 export class Cart extends Component {
@@ -44,7 +45,11 @@ export class Cart extends Component {
                         <tr>
                             <td>Total</td>
                             <td>{total} SAR</td>
-                            <td><button className="checkout-btn" type="button">Checkout</button></td>
+                            <td>
+                            <button className="checkout-btn" type="button">  
+                            <Link className="checkout-link" to="/payment">Checkout</Link>
+                            </button>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>

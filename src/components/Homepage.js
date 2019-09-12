@@ -29,7 +29,7 @@ import { Link } from 'react-router-dom';
                     <Carousel.Item>
                         <img
                             className="Home-slideshow"
-                            src="https://static.zara.net/photos//mkt/spots/aw19-north-punk20-woman-basic/home-33//desktop-imaged.st.jpg?ts=1565625201884"
+                            src="nike.jpeg"
                         />
                     </Carousel.Item>
                 </Carousel>

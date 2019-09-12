@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import '../components/styles/Payment.css';
+import {Link} from 'react-router-dom';
+
 
 class Payment extends Component {
     render() {
@@ -28,6 +30,7 @@ class Payment extends Component {
                 <Label>Expiry date</Label>
                 <Input type="date" className="card-date-input"/>
                 </Form>
+                <button className="place-order-btn">  <Link className="place-order-btn" to="/checkout">PLACE ORDER</Link></button>
                 </div>
 
             </div>

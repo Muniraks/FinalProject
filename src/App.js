@@ -19,6 +19,8 @@ import Homepage from './components/Homepage';
 import BrandProfile from './components/BrandProfile';
 import Cart from './components/Cart';
 import Payment from './components/Payment';
+import Checkout from './components/Checkout';
+
 import newProduct from './components/newProduct';
 import UpdateProduct from './components/updateProduct';
 
@@ -129,6 +131,7 @@ updateProducts = () => {
           <Route path="/BrandProfile/:id" render={(props) => <BrandProfile user={user} {...props} products={this.state.products} handleDelete={this.handleDelete} addToCart={this.addToCart} />} />
           <Route path="/Cart" component={() => <Cart cart={this.state.cart}/>} />
           <Route path="/Payment" component={Payment} />
+          <Route path="/Checkout" component={Checkout} />
           <Route path="/newProduct" component={newProduct} />
           <Route path="/updateProduct/:id" render={(props) => <UpdateProduct {...props} findProduct={this.findProduct} />} />
         </main>

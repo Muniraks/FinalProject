@@ -11,3 +11,18 @@
  .add-brand-btn:focus{
      outline: none;
  }
+ .add-brand-btn:hover{
+     color: white;
+     background-color: black;
+ }
+
+ .submit-product-btn:hover{
+     color:white;
+background-color: black;
+ }
+
+ .submit-product-btn{
+     color: white;
+     background-color: black;
+     
+ }

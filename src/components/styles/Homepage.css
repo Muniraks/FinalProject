@@ -50,6 +50,11 @@ h2{
  .sell-form-btn:focus{
     outline:none;
   }
+  .sell-form-btn:hover{
+    outline:none;
+    text-decoration: none;
+    color:white;
+  }
   .sell-form-btn:active {
     transform: translateY(2px);
   }

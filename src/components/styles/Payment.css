@@ -35,3 +35,23 @@
     height: 40px;
     margin: 8px;
 }
+
+.place-order-btn{
+    background-color: black;
+    color: white;
+    float: center;
+    text-decoration: none;
+    margin-top: 5px;
+   
+   
+    
+}
+
+.place-order-btn:hover{
+    outline:none;
+    text-decoration: none;
+    color: white;
+  }
+  .place-order-btn:active {
+    transform: translateY(2px);
+  }

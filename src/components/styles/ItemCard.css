@@ -6,8 +6,9 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
-  
-   
+    box-shadow: 10px 10px 5px 0px rgba(227,224,227,1);
+    background-color: rgb(247, 247, 244);   
+
 
 }
 
